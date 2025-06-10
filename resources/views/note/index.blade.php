@@ -13,7 +13,11 @@
                 <div class="note-buttons">
                     <a href="{{route('note.show', $note)}}" class="note-view-button">View</a>
                     <a href="{{route('note.edit', $note)}}" class="note-edit-button">Edit</a>
-                    <button class="note-delete-button">Delete</button>
+                    <form action="{{route('note.destroy', $note)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="note-delete-button">Delete</button>
+                    </form>
                 </div>
             @endforeach     
         </div>
