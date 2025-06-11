@@ -102,6 +102,43 @@ body {
     background-color: #dc2626;
 }
 
+nav[role="navigation"] {
+    margin-top: 2rem;
+}
+
+nav[role="navigation"] .inline-flex {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav[role="navigation"] .inline-flex > * {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #1d4ed8;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+nav[role="navigation"] .inline-flex > *:hover {
+    background-color: #f0f0f0;
+}
+
+nav[role="navigation"] .inline-flex > .cursor-default {
+    background-color: #1d4ed8;
+    color: white;
+    border-color: #1d4ed8;
+    pointer-events: none;
+}
+
+nav[role="navigation"] svg {
+    width: 16px;
+    height: 16px;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
     .note-buttons {
